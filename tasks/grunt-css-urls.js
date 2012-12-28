@@ -5,6 +5,7 @@
  * Copyright (c) 2012 Juan Pablo Garcia & Ideame Dev Team
  */
 module.exports = function (grunt) {
+    var fs = require('fs');
     var path = require('path');
     var util = require('util');
 
