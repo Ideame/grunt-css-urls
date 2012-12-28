@@ -10,7 +10,14 @@ module.exports = function (grunt) {
 
     grunt.registerMultiTask("cssUrls", "Parses a given main css file with @import rules, iterates through them replacing url() relative references with a relative url to the main css file.", function() {
         var importFile = this.file.src;
-        var baseDir = path.dirname(__dirname + '/' + this.file.src);
+
+        var writeln = (this.data.safe) ? grunt.logwriteln : grunt.fail.warn ;
+
+        if (!fs.existsSync(this.file.src)){
+            return writeln("Specified file not found: " + this.file.src);
+        }
+
+        var baseDir = path.dirname(grunt.file.expandFileURLs(this.file.src)[0]).replace('file://', '');
         var importContents = grunt.file.read(importFile);
 
         importContents.replace(/@import\s+'([^']+)/gim, function(match, location){

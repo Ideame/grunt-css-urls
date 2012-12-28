@@ -1,7 +1,7 @@
 {
     "name": "grunt-css-urls",
     "description": "Grunt task to make css urls relative to a main css file with @import rules",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "homepage": "https://github.com/Ideame/grunt-css-urls",
     "author": {
         "name": "Juan Pablo Garcia",
