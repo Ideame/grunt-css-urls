@@ -36,6 +36,14 @@ grunt.initConfig({
 });
 ```
 
+Changelog
+---------
+
+#### v1.3
+
+*   Ignore -moz urls like => url('xbl.xml#wordwrap');
+*   Ignore empty urls
+
 License
 -------
 

@@ -31,8 +31,18 @@ module.exports = function (grunt) {
             var css = content.replace(/url(?:\s+)?\(([^\)]+)\)/igm, function(match, url){
                 url = url.replace(/'|"/g, '');
 
-                if (/^\//.test(url) ) {
+                if (/^\//.test(url)) {
                     grunt.log.writeln(" - Absolute urls are not supported, url ignored => " + url);
+                    return url;
+                }
+                if (/^(\s+)?$/.test(url)) {
+                    grunt.log.writeln(" - Empty urls are not supported, url ignored => " + url);
+                    return url;
+                }
+
+                if (/#/.test(url)) {
+                    grunt.log.writeln(" - Anchors not allowed, url ignored => " + url);
+                    return url;
                 }
 
                 var newUrl = path.resolve(path.dirname(filename), url ).replace(baseDir, '.');
