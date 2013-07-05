@@ -40,7 +40,7 @@ module.exports = function (grunt) {
                     return url;
                 }
 
-                if (/#/.test(url)) {
+                if (/^#/.test(url)) {
                     grunt.log.writeln(" - Anchors not allowed, url ignored => " + url);
                     return url;
                 }
