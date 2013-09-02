@@ -147,14 +147,6 @@ h1.logo { url('./img/logo.png') }
 [getting_started]: https://github.com/cowboy/grunt/blob/master/docs/getting_started.md
 [grunt_css]: https://github.com/jzaefferer/grunt-css
 
-Changelog
----------
-
-#### v1.3
-
-*   Ignore -moz urls like => url('xbl.xml#wordwrap');
-*   Ignore empty urls
-
 License
 -------
 
