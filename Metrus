@@ -1,0 +1,29 @@
+table {
+
+  font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 0px;
+	border-color: #a9c6c9;
+	border-collapse: collapse;
+}
+table th {
+	border-width: 0px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	text-align:left;
+}
+table td {
+	border-width: 0px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+	text-align:left;
+}
+.requiredInput {
+	color:red;
+}
+.messageCell {
+	color:red;
+}
